@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Teammates</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the navbar dynamically
+            var navbarContainer = document.getElementById("navbarContainer");
+            var navbarRequest = new XMLHttpRequest();
+            navbarRequest.open("GET", "navbar.html", true);
+
+            navbarRequest.onreadystatechange = function () {
+                if (navbarRequest.readyState == 4 && navbarRequest.status == 200) {
+                    navbarContainer.innerHTML = navbarRequest.responseText;
+                    
+                    // Highlight the active link
+                    var currentLocation = window.location.href;
+                    var navLinks = document.querySelectorAll('.navbar a');
+
+                    navLinks.forEach(function (link) {
+                        if (link.href === currentLocation) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            };
+
+            navbarRequest.send();
+        });
+    </script>
+</head>
+<body>
+    <div id="navbarContainer"></div>
+    <div id="topBar">
+        <img src="IITR.jpg" alt="IITR logo" class="IITR"> 
+        <p class="civil">CIVIL ENGINEERING DEPARTMENT</p>
+        <p class="iit">Indian Institute of Technology Roorkee</p>
+    </div>
+    <div class="edu">
+        <p class="edud">Teammates</p>
+    </div>
+    <div class="head1">
+        <p class="deg">Topic</p>
+        <p class="subj">Scholar Name</p>
+        <p class="uni">Registration Year</p>
+        <p class="co">Co-Supervisor</p>
+    </div>
+    <div class="head10">
+        <p class="cw">Climate Change Impact on Groundwater</p>
+        <p class="wi">Roniki Anjaneyulu</p>
+        <p class="jap">2023</p>
+        <p class="tt"></p>
+    </div>
+    <div class="head11">
+        <p class="cw">Climate Change Impact on Surfacewater</p>
+        <p class="wi">Siddhi Chahaun</p>
+        <p class="jap">2023</p>
+        <p class="tt"></p>
+    </div>
+    <div class="head12">
+        <p class="cw">GLOF</p>
+        <p class="wi">Vikrant Shisodia</p>
+        <p class="jap">2023</p>
+        <p class="tt"></p>
+    </div>
+    
+    <div class="bar">
+        <a href="mailto:abhishek@ce.iitr.ac.in">
+            <img src="mail.jpg" alt="mail" class="mail">
+        </a>
+       </div>
+
+</body>
+</html>

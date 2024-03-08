@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Teaching Engagements</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the navbar dynamically
+            var navbarContainer = document.getElementById("navbarContainer");
+            var navbarRequest = new XMLHttpRequest();
+            navbarRequest.open("GET", "navbar.html", true);
+
+            navbarRequest.onreadystatechange = function () {
+                if (navbarRequest.readyState == 4 && navbarRequest.status == 200) {
+                    navbarContainer.innerHTML = navbarRequest.responseText;
+                    
+                    // Highlight the active link
+                    var currentLocation = window.location.href;
+                    var navLinks = document.querySelectorAll('.navbar a');
+
+                    navLinks.forEach(function (link) {
+                        if (link.href === currentLocation) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            };
+
+            navbarRequest.send();
+        });
+    </script>
+</head>
+<body>
+    <div id="navbarContainer"></div>
+    <div id="topBar">
+        <img src="IITR.jpg" alt="IITR logo" class="IITR"> 
+        <p class="civil">CIVIL ENGINEERING DEPARTMENT</p>
+        <p class="iit">Indian Institute of Technology Roorkee</p>
+    </div>
+    <div class="edu">
+        <p class="edud">Teaching Engagements</p>
+    </div>
+    <div class="head1">
+        <p class="deg">Course Name</p>
+        <p class="sub">Course Code</p>
+        <p class="uni">Semester and Year</p>
+        <p class="year">Class</p>
+    </div>
+    <div class="head2">
+        <p class="p">Channel Hydraulics</p>
+        <p class="w">CEN 205</p>
+        <p class="jap">Autum Semester 2023-24</p>
+        <p class="tt">B.Tech</p>
+        </div>
+        <div class="head3">
+            <p class="p">Advanced Hydrology</p>
+            <p class="w">CEN-531</p>
+            <p class="jap">Autum Semester 2023-24</p>
+            <p class="tt">M.Tech.</p>
+        </div>
+        <div class="pb">
+            <p class="pbd">Special Lectures Delivered</p>
+        </div>
+        <div class="head5">
+            <p class="deg">S.NO.</p>
+            <p class="sub">Title</p>
+            <p class="uni">Organisation</p>
+            <p class="year">Date</p>
+        </div>
+        <div class="head8">
+            <p class="p">1.</p>
+            <div class="exp">
+                <p>Exploring linkages amongst environmental challenges, science, and people participation for climate action</p>
+            </div>
+            <div class="fac">
+                <p>Faculty Development Program, Amity Institute of Environmental Sciences (AIES), Noida</p>
+            </div>
+            <p class="tt">07-Jun-2023</p>
+        </div>
+        <div class="head9">
+            <p class="p">2.</p>
+            <div class="exp">
+                <p>Anthropogenic Impacts on Water Storage Dynamics across Scales</p>
+            </div>
+            <div class="fac">
+                <p>International conference on "Sustainable Development and Disaster Resilience Through Innovation (ICSDDRTI-2023)" at Amity University, Lucknow</p>
+            </div>
+            <p class="tt">06-Oct-2023</p>
+        </div>
+        <div class="bar">
+            <a href="mailto:abhishek@ce.iitr.ac.in">
+                <img src="mail.jpg" alt="mail" class="mail">
+            </a>
+           </div>
+</body>
+</html>

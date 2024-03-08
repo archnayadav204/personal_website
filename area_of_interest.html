@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Area of Interest</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the navbar dynamically
+            var navbarContainer = document.getElementById("navbarContainer");
+            var navbarRequest = new XMLHttpRequest();
+            navbarRequest.open("GET", "navbar.html", true);
+
+            navbarRequest.onreadystatechange = function () {
+                if (navbarRequest.readyState == 4 && navbarRequest.status == 200) {
+                    navbarContainer.innerHTML = navbarRequest.responseText;
+                    
+                    // Highlight the active link
+                    var currentLocation = window.location.href;
+                    var navLinks = document.querySelectorAll('.navbar a');
+
+                    navLinks.forEach(function (link) {
+                        if (link.href === currentLocation) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            };
+
+            navbarRequest.send();
+        });
+    </script>
+</head>
+<body>
+    <div id="navbarContainer"></div>
+    <div id="topBar">
+        <img src="IITR.jpg" alt="IITR logo" class="IITR"> 
+        <p class="civil">CIVIL ENGINEERING DEPARTMENT</p>
+        <p class="iit">Indian Institute of Technology Roorkee</p>
+    </div>
+    <div class="aoi">
+        <p class="ao">Areas of</p>
+        <p class="oi">Interest</p>
+    </div>
+    <div class="t1">
+        <img src="v1.png" alt="tb" class="v1">
+            <img src="v1.png" alt="tb" class="v2" >
+            <p class="hh1">Global and regional hydrological cycle</p>
+           <p class="text1"> My research focuses on understanding the global and regional hydrological cycle, deciphering patterns in precipitation, evaporation, and runoff at various scales. By analyzing water movement in atmospheric, terrestrial, and oceanic pathways, I enhance our knowledge of hydrological processes. Through rigorous analysis and modeling, I contribute to accurate predictions for sustainable water management. Join me in unraveling the mysteries of the hydrological cycle for a water-secure future.</p>
+    </div>
+    <div class="t2">
+        <img src="v1.png" alt="tb" class="w1">
+        <img src="v1.png" alt="tb" class="w2" >
+        <p class="hh2">Groundwater and Sustainability</p>
+        <p class="text2">My research centers on the intricate relationship between groundwater resources and environmental sustainability. I conduct holistic assessments, analyzing quality, quantity, and aquifer dynamics. Using advanced hydrogeological techniques, I emphasize sustainable groundwater management, preserving this vital resource for future generations. Join me in the pursuit of innovative solutions, safeguarding our groundwater reservoirs and fostering environmental harmony.</p>
+    </div>
+    <div class="t3">
+        <img src="v1.png" alt="tb" class="x1">
+            <img src="v1.png" alt="tb" class="x2" >
+            <p class="hh3">GRACE terrestrial water storage</p>
+            <p class="text3">My focus on GRACE terrestrial water storage involves advanced analysis of Earth's water distribution. Using GRACE satellite data, I study changes in terrestrial water storage, providing valuable insights into groundwater availability and fluctuations. Through precise measurements and analysis, I contribute to understanding global water dynamics. Join me in unraveling the complexities of terrestrial water storage for sustainable resource management.</p>
+    </div>
+    <div class="t4">
+        <img src="v1.png" alt="tb" class="w1">
+        <img src="v1.png" alt="tb" class="w2" >
+        <p class="hh2">Remote sensing and machine learning methods</p>
+        <p class="text2">My expertise in remote sensing and machine learning methods enables precise analysis of environmental data. I leverage cutting-edge technology to interpret complex patterns, aiding in the understanding of Earth's surface and its changes over time. By integrating remote sensing and machine learning, I contribute to innovative solutions in environmental monitoring and resource management. Join me in exploring the intersection of technology and environmental science for impactful insights and sustainable practices.</p>
+    </div>
+    <div class="t5">
+        <img src="v1.png" alt="tb" >
+        <img src="v1.png" alt="tb" class="y2" >
+        <p class="hh5">Identification of hydro-climatic extremes</p>
+        <p class="text5">My research specializes in the identification of hydro-climatic extremes, focusing on detecting patterns in extreme weather events and their impacts on hydrological systems. Through rigorous analysis and data modeling, I develop methods to identify and understand these extremes, contributing crucial insights to climate resilience strategies. Join me in the pursuit of knowledge, as we uncover the intricacies of hydro-climatic extremes, paving the way for proactive adaptation measures and sustainable solutions.</p>
+    </div>
+    <div class="t6">
+        <img src="v1.png" alt="tb" class="w1">
+        <img src="v1.png" alt="tb" class="w2" >
+        <p class="hh6">Precipitation extremes, uncertainty quantification, adaptation and mitigation</p>
+        <p class="text6">Investigating precipitation extremes and their uncertainties is a key focus of my research. I employ advanced methods to quantify uncertainties in extreme weather patterns, paving the way for effective adaptation and mitigation strategies. By analyzing precipitation extremes, I contribute valuable insights to climate science, enabling proactive measures to address the challenges posed by changing weather patterns. Join me in the pursuit of understanding and mitigating precipitation extremes, ensuring a more resilient and sustainable future.</p>
+    </div>
+    <div class="bottomBar">
+        <a href="mailto:abhishek@ce.iitr.ac.in">
+            <img src="mail.jpg" alt="mail" class="mail">
+        </a>
+    </div>
+
+</body>
+</html>

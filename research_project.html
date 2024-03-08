@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Research Project</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the navbar dynamically
+            var navbarContainer = document.getElementById("navbarContainer");
+            var navbarRequest = new XMLHttpRequest();
+            navbarRequest.open("GET", "navbar.html", true);
+
+            navbarRequest.onreadystatechange = function () {
+                if (navbarRequest.readyState == 4 && navbarRequest.status == 200) {
+                    navbarContainer.innerHTML = navbarRequest.responseText;
+                    
+                    // Highlight the active link
+                    var currentLocation = window.location.href;
+                    var navLinks = document.querySelectorAll('.navbar a');
+
+                    navLinks.forEach(function (link) {
+                        if (link.href === currentLocation) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            };
+
+            navbarRequest.send();
+        });
+    </script>
+    
+</head>
+<body>
+    <div id="navbarContainer"></div>
+    <div id="topBar">
+        <img src="IITR.jpg" alt="IITR logo" class="IITR"> 
+        <p class="civil">CIVIL ENGINEERING DEPARTMENT</p>
+        <p class="iit">Indian Institute of Technology Roorkee</p>
+    </div>
+</div>
+<img src="cbg.jpg" class="cbg">
+<div>
+    <div class="rbox">
+        <p class="title">1. Title:-</p>
+        <p class="ide">Identification and assessment of groundwater potential zones in (semi)-arid regions for Managed Aquifer Recharge in Rajasthan</p>
+        <p class="spo">Sponsor:</p>
+        <p class="gov">Govt. of Rajasthan</p>
+        <p class="amt">Amount:</p>
+        <p class="mon">₹ 120.00 Lakhs</p>
+        <p class="san">Sanctioned Year:</p>
+        <p class="yr">2023-24</p>
+        <p class="ro">Role:</p>
+        <p class="cop">Co-PI</p>
+    </div>
+    <div class="bar">
+        <a href="mailto:abhishek@ce.iitr.ac.in">
+            <img src="mail.jpg" alt="mail" class="mail">
+        </a>
+       </div>
+</body>
+</html>

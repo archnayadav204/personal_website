@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Professional Background</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the navbar dynamically
+            var navbarContainer = document.getElementById("navbarContainer");
+            var navbarRequest = new XMLHttpRequest();
+            navbarRequest.open("GET", "navbar.html", true);
+
+            navbarRequest.onreadystatechange = function () {
+                if (navbarRequest.readyState == 4 && navbarRequest.status == 200) {
+                    navbarContainer.innerHTML = navbarRequest.responseText;
+                    
+                    // Highlight the active link
+                    var currentLocation = window.location.href;
+                    var navLinks = document.querySelectorAll('.navbar a');
+
+                    navLinks.forEach(function (link) {
+                        if (link.href === currentLocation) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            };
+
+            navbarRequest.send();
+        });
+    </script>
+</head>
+<body>
+    <div id="navbarContainer"></div>
+    <div id="topBar">
+        <img src="IITR.jpg" alt="IITR logo" class="IITR"> 
+        <p class="civil">CIVIL ENGINEERING DEPARTMENT</p>
+        <p class="iit">Indian Institute of Technology Roorkee</p>
+    </div>
+    <div class="edu">
+        <p class="edud">Educational Details</p>
+    </div>
+    <div class="head1">
+        <p class="deg">Degree</p>
+        <p class="sub">Subject</p>
+        <p class="uni">University</p>
+        <p class="year">Year</p>
+    </div>
+    <div class="head2">
+        <p class="p">Ph. D.</p>
+        <p class="w">Water Resource Engineering</p>
+        <p class="jap">TokyoTech, Japan</p>
+        <p class="tt">2022</p>
+    </div>
+    <div class="head3">
+        <p class="p">M. Tech.</p>
+        <p class="w">Groundwater Hydrology</p>
+        <p class="jap">IIT Roorkee</p>
+        <p class="tt">2019</p>
+    </div>
+    <div class="head4">
+        <p class="p">B. Tech.</p>
+        <p class="w">Civil Engineering</p>
+        <p class="jap">IIT Roorkee</p>
+        <p class="tt">2017</p>
+    </div>
+    <div class="pb">
+        <p class="pbd">Professional Background</p>
+    </div>
+    <div class="head5">
+        <p class="deg">From</p>
+        <p class="sub">To</p>
+        <p class="uni">Designation</p>
+        <p class="year">Organisation</p>
+    </div>
+    <div class="head6">
+        <p class="p">Mar 2023</p>
+        <p class="w">Present</p>
+        <p class="jap">Assistant Professor</p>
+        <p class="tt">IIT Roorkee</p>
+    </div>
+    <div class="head7">
+        <p class="p">Nov 2022</p>
+        <p class="w">Mar 2023</p>
+        <p class="jap">C V Raman Postdoc Fellow</p>
+        <p class="tt">IISc Banglore</p>
+    </div>
+    <div class="ha">
+        <p class="had">Honors and Awards</p>
+    </div>
+    <div class="head13">
+        <p class="deg">Award</p>
+        <p class="uni">University</p>
+        <p class="year">Year</p>
+    </div>
+    <div class="head14">
+        <p class="p">MEXT Research Scholarship</p>
+        <p class="jap">TockyoTech, Japan</p>
+        <p class="tt">2019</p>
+    </div>
+    <div class="head15">
+        <p class="p">Department Gold Medal</p>
+        <p class="jap">IIT Roorkee</p>
+        <p class="tt">2019</p>
+    </div>
+    <div class="head16">
+        <p class="p">DAAD IIT Master Sandwich Fellowship</p>
+        <p class="jap">TU Dresden, Germany</p>
+        <p class="tt">2018</p>
+    </div>
+    <div class="head17">
+        <p class="p">Summer Undergraduate Research Award (SURA)</p>
+        <p class="jap">IIT Roorkee</p>
+        <p class="tt">2015</p>
+    </div>
+   
+    <div class="bar">
+        <a href="mailto:abhishek@ce.iitr.ac.in">
+            <img src="mail.jpg" alt="mail" class="mail">
+        </a>
+       </div>
+
+</body>
+</html>

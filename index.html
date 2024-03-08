@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the navbar dynamically
+            var navbarContainer = document.getElementById("navbarContainer");
+            var navbarRequest = new XMLHttpRequest();
+            navbarRequest.open("GET", "navbar.html", true);
+
+            navbarRequest.onreadystatechange = function () {
+                if (navbarRequest.readyState == 4 && navbarRequest.status == 200) {
+                    navbarContainer.innerHTML = navbarRequest.responseText;
+                    
+                    // Highlight the active link
+                    var currentLocation = window.location.href;
+                    var navLinks = document.querySelectorAll('.navbar a');
+
+                    navLinks.forEach(function (link) {
+                        if (link.href === currentLocation) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            };
+            navbarRequest.send();
+        });
+    </script>
+</head>
+<body>
+<div id="topBar">
+    <img src="IITR.jpg" alt="IITR logo" class="IITR"> 
+    <p class="civil">CIVIL ENGINEERING DEPARTMENT</p>
+    <p class="iit">Indian Institute of Technology Roorkee</p>
+</div>
+    <div id="navbarContainer"></div>
+    <div class="wel" >
+        <p class="abhi">Welcome to Abhishek's Professional Portfolio!</p>
+        <p class="i">I am an Assistant Professor specializing in Hydraulics Engineering, with a focus on sustainable groundwater management hydrological cycles, and innovative technologies like remote sensing and machine learning methods. My research centers on identifying hydro-climatic extremes and developing mitigation strategies.</p>
+        <img src="homebg.jpg" alt="homebg" class="homebg">
+        <p class="join">Join me in exploring the scientific frontier of water resource management.</p>
+    </div>
+   <div class="bottomBar">
+        <a href="mailto:abhishek@ce.iitr.ac.in">
+            <img src="mail.jpg" alt="mail" class="mail">
+        </a>
+    </div>
+
+</body>
+</html>

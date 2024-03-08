@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the navbar dynamically
+            var navbarContainer = document.getElementById("navbarContainer");
+            var navbarRequest = new XMLHttpRequest();
+            navbarRequest.open("GET", "navbar.html", true);
+
+            navbarRequest.onreadystatechange = function () {
+                if (navbarRequest.readyState == 4 && navbarRequest.status == 200) {
+                    navbarContainer.innerHTML = navbarRequest.responseText;
+                    
+                    // Highlight the active link
+                    var currentLocation = window.location.href;
+                    var navLinks = document.querySelectorAll('.navbar a');
+
+                    navLinks.forEach(function (link) {
+                        if (link.href === currentLocation) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            };
+
+            navbarRequest.send();
+        });
+    </script>
+   
+</head>
+<body>
+    <div id="navbarContainer"></div>
+    <div id="topBar">
+        <img src="IITR.jpg" alt="IITR logo" class="IITR"> 
+        <p class="civil">CIVIL ENGINEERING DEPARTMENT</p>
+        <p class="iit">Indian Institute of Technology Roorkee</p>
+    </div>
+    <img src="cbg.jpg" class="cbg">
+    <div>
+        <p class="abh">ABHISHEK</p>
+        <img src="prof.jpg" alt="prof" class="prof">
+        <div class="box">
+            <p class="ap">ASSISTANT PROFESSOR</p>
+            <img src="mail.jpg" alt="mail" class="ma">
+            <p class="ce">abhishek@ce.iitr.ac.in</p>
+            <p class="spec">Specialization : Hydraulics Engineering</p>
+            <img src="call.jpg" alt="call" class="call">
+            <p class="o">( O ) 91-1332-285180</p>
+            <p class="r">( R ) 91-1332-284480</p>
+            <p class="room">Room No : 217-A</p>
+            <img class="m" src="call.jpg" alt="call">
+            <p class="mo">( M ) 9897674598</p>
+        </div>
+       <p class="get">GET IN TOUCH</p>
+       <p class="feel">Feel free to drop a message below or reach out via email to connect. I look forward to hearing from you and exploring potential collaborations.</p> 
+    </div>
+   <div class="bar">
+    <a href="mailto:abhishek@ce.iitr.ac.in">
+        <img src="mail.jpg" alt="mail" class="mail">
+    </a>
+   </div>
+
+</body>
+</html>

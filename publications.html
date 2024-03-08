@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Publications</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the navbar dynamically
+            var navbarContainer = document.getElementById("navbarContainer");
+            var navbarRequest = new XMLHttpRequest();
+            navbarRequest.open("GET", "navbar.html", true);
+
+            navbarRequest.onreadystatechange = function () {
+                if (navbarRequest.readyState == 4 && navbarRequest.status == 200) {
+                    navbarContainer.innerHTML = navbarRequest.responseText;
+                    
+                    // Highlight the active link
+                    var currentLocation = window.location.href;
+                    var navLinks = document.querySelectorAll('.navbar a');
+
+                    navLinks.forEach(function (link) {
+                        if (link.href === currentLocation) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            };
+
+            navbarRequest.send();
+        });
+    </script>
+</head>
+<body>
+    <div id="navbarContainer"></div>
+    <div id="topBar">
+        <img src="IITR.jpg" alt="IITR logo" class="IITR"> 
+        <p class="civil">CIVIL ENGINEERING DEPARTMENT</p>
+        <p class="iit">Indian Institute of Technology Roorkee</p>
+    </div>
+    <div class="pub">
+        <span class="nam">1. Abhishek, and Kinouchi, T.</span>
+        <span class="bo"> (2021). Synergetic application of GRACE gravity data, global hydrological model, and in-situ observations to quantify water storage dynamics over Peninsular India during 2002-2017.</span> 
+        <span class="doi">Journal of Hydrology. DOI:</span>
+        <a class="bo" href="https://doi.org/10.1016/j.jhydrol.2021.126069"><span>10.1016/j.jhydrol.2021.126069</span></a>
+    </div>
+    <div class="next">
+        <span class="nam">2. Dass, B., Abhishek, Sen, S., Bamola, V., Sharma, A. and Sen, D.</span>
+        <span class="bo"> (2021). Assessment of Spring flows in Indian Himalayan Micro-Watersheds -A Hydro-geological Approach.</span> 
+        <span class="doi">Journal of Hydrology. DOI:</span>
+        <a class="bo" href="https://doi.org/10.1016/j.jhydrol.2021.126354"><span>10.1016/j.jhydrol.2021.126354</span></a>
+    </div>
+    <div class="next">
+        <span class="nam">3. Abhishek, Kinouchi, T. and Sayama, T.</span>
+        <span class="bo"> (2021). A comprehensive assessment of water storage dynamics and hydroclimatic extremes in the Chao Phraya River Basin during 2002-2020.</span> 
+        <span class="doi">Journal of Hydrology. DOI:</span>
+        <a class="bo" href="https://doi.org/10.1016/j.jhydrol.2021.126868"><span>10.1016/j.jhydrol.2021.126868</span></a>
+    </div>
+    <div class="next">
+        <span class="nam">4. Abhishek, Kinouchi, T., Abolafia-Rosenzweig, R. and Ito, M.</span>
+        <span class="bo"> (2022). Water budget closure in the upper Chao Phraya River Basin, Thailand using multisource data. </span> 
+        <span class="doi">Remote Sensing. DOI:</span>
+        <a class="bo" href=" https://doi.org/10.3390/rs14010173"><span>10.3390/rs14010173</span></a>
+    </div>
+    <div class="next">
+        <span class="nam">5. Zhao, W., Abhishek and Kinouchi, T. </span>
+        <span class="bo"> (2022). Uncertainty quantification in intensity-duration-frequency curves under climate change: Implications for flood-prone tropical cities. </span> 
+        <span class="doi">Atmospheric Research. DOI:</span>
+        <a class="bo" href=" https://doi.org/10.1016/j.atmosres.2022.106070">
+            <span>10.1016/j.atmosres.2022.106070</span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">6. Abhishek, and Kinouchi, T. </span>
+        <span class="bo"> (2022). Multidecadal Land Water and Groundwater Drought Evaluation in Peninsular India. </span> 
+        <span class="doi">Remote Sensing. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.3390/rs14061486">
+            <span>10.3390/rs14061486</span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">7. Xiong, J., Yin, J., Guo, S., He, S., Chen, J. and Abhishek.</span>
+        <span class="bo">(2022). Annual runoff coefficient variation in a changing environment: a global perspective. </span> 
+        <span class="doi">Environmental Research Letters. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.1088/1748-9326/ac62ad">
+            <span>10.1088/1748-9326/ac62ad </span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">8. Zhao, W., Abhishek, Kinouchi, T., Raksmey, A. and Zhuang, Q.</span>
+        <span class="bo">(2022). Quantification of climate change impact on heavy rainfall in Cambodia: Implications for adaptation strategies. </span> 
+        <span class="doi">Science of the Total Environment. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.1016/j.scitotenv.2022.155553">
+            <span>10.1016/j.scitotenv.2022.155553 </span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">9. Xiong, J., Abhishek, Guo, S. and Kinouchi, T.</span>
+        <span class="bo">(2022). Leveraging machine learning methods to quantify 50 years of dwindling groundwater in India. </span> 
+        <span class="doi">Science of the Total Environment. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.1016/j.scitotenv.2022.155474 ">
+            <span>10.1016/j.scitotenv.2022.155474 </span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">10. Bageshree, K., Abhishek, and Kinouchi, T.</span>
+        <span class="bo">(2022). Unraveling the multiple drivers of greening- browning and leaf area variability in a socioeconomically sensitive drought-prone region. </span> 
+        <span class="doi">Climate. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.3390/cli10050070 ">
+            <span>10.3390/cli10050070 </span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">11. Xiong, J., Guo, S., Chen, D., Zhong, Y., Liu, B., Abhishek, and Yin, J. </span>
+        <span class="bo">(2022). Past and future terrestrial water storage changes in the lower Mekong River basin: the influences of climatic and non-climatic factors. </span> 
+        <span class="doi">Journal of Hydrology. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.1016/j.jhydrol.2022.128275">
+            <span>10.1016/j.jhydrol.2022.128275 </span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">12. Xiong, J., Yin, J., Guo S., Yin, W., Rao, W., Chao, N. and Abhishek. </span>
+        <span class="bo">(2022). Using GRACE to detect groundwater variation in North China Plain after south-north water diversion. </span> 
+        <span class="doi">Groundwater. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.1111/gwat.13253">
+            <span> 10.1111/gwat.13253 </span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">13. Bageshree, K., Abhishek, and Kinouchi, T.</span>
+        <span class="bo">(2022). A Multivariate Drought Index for Seasonal Agriculture Drought Classification in Semiarid Regions. </span> 
+        <span class="doi">Remote Sensing. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.3390/rs14163891">
+            <span>10.3390/rs14163891 </span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">14. Xiong, J., Guo, S., Abhishek, Li, J. and Yin, J.</span>
+        <span class="bo">(2022). A novel standardized drought and flood potential index based on reconstructed daily GRACE data.</span> 
+        <span class="doi">Journal of Hydrometeorology. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.1175/JHM-D-22-0011.1">
+            <span>10.1175/JHM-D-22-0011.1</span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">15.Xiong, J., Guo, S., Abhishek, Chen, J. and Yin, J. </span>
+        <span class="bo">(2022). Global evaluation of the “dry gets drier, and wet gets wetter” paradigm from a terrestrial water storage change perspective.</span> 
+        <span class="doi">Hydrology and Earth System Sciences (Highlight article). DOI: </span>
+        <a class="bo" href="  https://doi.org/10.5194/hess-26-6457-2022">
+            <span> 10.5194/hess-26-6457-2022</span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">16. Xiong, J., Jiang, L., Qiu, Y., Wongchuig, S., Abhishek, Guo, S. and Chen, J.</span>
+        <span class="bo">(2023). On the capabilities of the SWOT satellite to monitor the lake level change over the Third Pole.</span> 
+        <span class="doi">Environmental Research Letters. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.1088/1748-9326/acbfd1">
+            <span> 10.1088/1748-9326/acbfd1</span>
+        </a>
+    </div>
+    <div class="next">
+        <span class="nam">17. Zhao, W., Abhishek, B. S. Takhellambam, Zhang, J., Zhao, Y., Kinouchi, T.</span>
+        <span class="bo">(2023). Spatiotemporal variability of current and future sub-daily rainfall in Japan using state-of-the-art high-quality datasets.</span> 
+        <span class="doi">Water Resources Research. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.1029/2022WR034305">
+            <span>10.1029/2022WR034305</span>
+        </a>
+    </div>
+    <div class="nextbo">
+        <span class="nam">18. Xiong, J., Abhishek, Xu, L., Chandanpurkar, H. A., Famiglietti, J. S., Zhang, C., Ghiggi, G., Guo, S., Pan, Y., and Vishwakarma, B. D </span>
+        <span class="bo">(2023). ET-WB: water-balance-based estimations of terrestrial evaporation over global land and major global basins.</span> 
+        <span class="doi">Earth System Science Data. DOI:</span>
+        <a class="bo" href="  https://doi.org/10.5194/essd-15-4571-2023">
+            <span>10.5194/essd-15-4571-2023</span>
+        </a>
+    </div>
+    <div class="bottomBar">
+        <a href="mailto:abhishek@ce.iitr.ac.in">
+            <img src="mail.jpg" alt="mail" class="mail">
+        </a>
+    </div>
+
+</body>
+</html>
